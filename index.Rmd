@@ -1,0 +1,33 @@
+---
+title: "My Bookdown"
+author: "Clara Feigelson"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site 
+output: bookdown::gitbook
+documentclass: book
+description: "This is an example of using the bookdown package. The output format for this example is bookdown::gitbook."
+---
+
+# My Intro {-}
+
+When gitbook sees a #, then it automatically thinks that it is the first chapter. Adding the curly brackets and - tells it that this is a header. 
+
+Then I copied the other .Rmd files into the bookdown-demo repo. The added files will automatically show up in the files in the project. Replace the YAML header with a # and chapter name. Now R thinks this is a chapter. Make sure there are no other single # in the code, otherwise R will think that is a new chapter when it is not.
+
+How to order chapters: 
+1) name Rmarkdowns alphanumerically
+2) Create a yml file (a text file)
+  - ui = user interface
+  - output_dir: creates a new folder in repo for docs so that github will publish the book
+  - important to have the tabs
+  
+ 
+To render bookdown: 
+bookdown::render_book()
+
+To view the bookdown:
+1) click on addins and select view book
+2) run bookdown:::serve_book() in the console
+
+To view a bookdown you already made:
+Go into docs folder you made and left click on index.html. Then click the View in Web Browser
